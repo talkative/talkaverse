@@ -1,17 +1,18 @@
-import events from '@/app/configs/events';
-import { faCalendar, faPlay } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import CalendarEvent from '../Molecules/CalendarEvent';
-
-const test = 'marias';
-
 const Calendar: any = () => {
   return (
     <div>
-      <CalendarEvent eventName={events[0].summary} eventDate={''} />
-      <CalendarEvent eventName={'Marias födelsedag'} eventDate={'23-07-23'} />
-      <CalendarEvent eventName={'Marias födelsedag'} eventDate={'23-07-23'} />
+      <p className="border-2 border-rose-500 text-black">Calendar</p>
+      <div className="bg-slate-50 grid grid-cols-3 gap-4  bg-black ">
+        <div className="border-2 border-rose-500 row-span-6">
+          Kul grejer i veckan{' '}
+        </div>
+        <div className="border-2 border-rose-500 row-span-6">Händer idag</div>
+        <div className="border-2 border-rose-500 row-span-6">
+          <p> Imorgon</p>
+        </div>
+      </div>
     </div>
   );
 };
+
 export default Calendar;
