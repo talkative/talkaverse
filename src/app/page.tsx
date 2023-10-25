@@ -10,9 +10,9 @@ import React, { useState } from 'react';
 export default function Home() {
   return (
     <main className="max-h-screen min-h-screen p-4">
-      {/* <div className=''>
+      <div className="">
         <MusicPlayer />
-      </div> */}
+      </div>
       <div className="grid grid-cols-5 gap-4 ">
         <div className="col-span-2">
           <MemoryLane />
