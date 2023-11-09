@@ -9,24 +9,25 @@ import React, { useState } from 'react';
 
 export default function Home() {
   return (
-    <main className="max-h-screen min-h-screen p-4">
-      <div className="">
+    <main className="w-full min-h-screen p-4 flex flex-col space-y-8 p-16">
+      <div className="flex flex-row justify-between  w-full">
         <MusicPlayer />
+        <OfficeHost />
       </div>
-      <div className="grid grid-cols-5 gap-4 ">
-        <div className="col-span-2">
+
+      <div className="w-full flex flex-row space-x-8">
+        <div className="w-1/3">
           <MemoryLane />
         </div>
-        <div className="col-span-3">
+        <div className="w-1/3">
           <Calendar />
         </div>
-        <div className="col-span-3 ">
+        <div className="w-1/3">
           <Images />
         </div>
-        <div className="col-span-2">
-          <OfficeHost />
-        </div>
       </div>
+
+      <div className=" flex flex-row w-full"></div>
     </main>
   );
 }

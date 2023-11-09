@@ -4,19 +4,19 @@ import imgSrc from '../../../../public/image/DSCF2524.jpg';
 
 const MemoryLane: any = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-center">
       <h1 className="text-xl ">{"Denna dag i Talkative's historia..."}</h1>
 
-      <div className="grid grid-cols-2 gap-2">
-        <div className="relative inline-block">
+      <div className="">
+        <div className="flex flex-col justify-center">
           <Image
-            className="object-cover w-full rounded-2xl"
+            className="object-cover w-1/2 rounded-2xl"
             src={imgSrc}
             alt="memorylane"
           />
         </div>
         <div>
-          <h2 className="text-lg">6/6-2022</h2>
+          <h2 className="text-lg ">6/6-2022</h2>
           <p>
             Dracks det öl och spelades boule i Folkets Park. Adrian vann inte.
             Heller inte Anton som endast gick därifrån med en bruten tå. Marcus
