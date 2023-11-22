@@ -1,16 +1,13 @@
 interface CalendarEventType {
-  eventName?: string;
-  eventDate?: string;
+  title?: string;
+  date?: string;
 }
 
-const CalendarEvent: React.FC<CalendarEventType> = ({
-  eventName,
-  eventDate,
-}) => {
+const CalendarEvent: React.FC<CalendarEventType> = ({ title, date }) => {
   return (
-    <div className="row-span-6 mt-4 text-black rounded-lg bg-babyblue p-4">
-      <p className="font-raleway"> {eventName}</p>
-      <p className="font-raleway"> {eventDate}</p>
+    <div className="mt-4 text-black rounded-lg bg-almostwhite h-full p-4 flex flex-row">
+      <p className="font-raleway"> {date}</p>
+      <p className="font-raleway"> {title}</p>
     </div>
   );
 };
