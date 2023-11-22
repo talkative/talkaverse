@@ -29,6 +29,9 @@ module.exports = {
         mustard: 'rgb(var(--color-mustard) / <alpha-value>)',
         almostwhite: 'rgb(var(--color-almost-white) / <alpha-value>)',
         gray: 'rgb(var(--color-gray) / <alpha-value>)',
+        talkativeyellow: 'rgb(var(--color-talkative-yellow) / <alpha-value>)',
+        talkativedarkpurple:
+          'rgb(var(--color-talkative-darkpurple) / <alpha-value>)',
       },
       screens: {
         tiltedPhone: { raw: '(min-width: 800px), (max-height: 450px)' },
