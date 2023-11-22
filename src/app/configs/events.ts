@@ -1,15 +1,19 @@
 interface eventType {
-  name: string;
+  title: string;
   date: string;
 }
 
 const events: eventType[] = [
   {
-    name: 'Rebeckas namnsdag',
+    title: 'Rebeckas namnsdag',
     date: '23 maj 2023',
   },
   {
-    name: 'Marias sista dag',
+    title: 'Marias namnsdag dag',
+    date: '28 februari 2023',
+  },
+  {
+    title: 'Marias sista dag',
     date: '12 maj 2023',
   },
 ];

@@ -1,12 +1,18 @@
+import events from '@/app/configs/events';
 import CalendarEvent from '../molecules/CalenderEvent';
+
+console.log('events', events);
 
 const Calendar: any = () => {
   return (
-    <div>
-      <CalendarEvent eventDate="07-12-23" eventName="Åt en kaka" />
-      <CalendarEvent eventDate="07-12-23" eventName="Åt en kaka" />
-      <CalendarEvent eventDate="07-12-23" eventName="Åt en kaka" />
-      <CalendarEvent eventDate="07-12-23" eventName="Åt en kaka" />
+    <div className="bg-white h-full ">
+      {events.map((event, index) => (
+        <>
+          <div className="h-1/3">
+            <CalendarEvent date={event.date} title={event.title} />
+          </div>
+        </>
+      ))}
     </div>
   );
 };
