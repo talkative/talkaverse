@@ -5,25 +5,18 @@ import imgSrc from '../../../../public/image/DSCF2524.jpg';
 const MemoryLane: any = () => {
   return (
     <div className="flex flex-col justify-center">
-      <h1 className="text-xl ">{"Denna dag i Talkative's historia..."}</h1>
-
-      <div className="">
-        <div className="flex flex-col justify-center">
-          <Image
-            className="object-cover w-1/2 rounded-2xl"
-            src={imgSrc}
-            alt="memorylane"
-          />
+      <div className="p-1 overflow-hidden bg-talkativedarkpurple rounded-2xl">
+        <div className="overflow-hidden rounded-t-xl w-full aspect-[5/3]">
+          <Image className="mx-auto" src={imgSrc} alt="memorylane" />
         </div>
-        <div>
-          <h2 className="text-lg ">6/6-2022</h2>
-          <p>
-            Dracks det öl och spelades boule i Folkets Park. Adrian vann inte.
-            Heller inte Anton som endast gick därifrån med en bruten tå. Marcus
-            och Marcus, var ska vi börja? Inte en enda vinst där heller. Vem
-            vann egentligen? Är vi inte bara här för att ha kul? Inte om du
-            frågar Mackan och Mackan.
-          </p>
+        <div className="grid grid-cols-2 p-4 text-talkativeyellow">
+          <div className="text-talkativeyellow">
+            <h1 className="text-6xl font-bold">12/6</h1>
+            <h2 className="mt-2 text-3xl font-semibold">2022</h2>
+          </div>
+          <div className="">
+            <p>Anton vann mot Adrian. Det var en stor dag för Anton.</p>
+          </div>
         </div>
       </div>
     </div>
