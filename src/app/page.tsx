@@ -9,13 +9,13 @@ import React, { useState } from 'react';
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen p-4 flex flex-col space-y-8 p-16 bg-gradient-to-l from-gray">
-      <div className="flex flex-row justify-between  w-full">
+    <main className="flex flex-col w-full min-h-screen p-4 p-16 space-y-8 bg-gradient-to-l from-gray">
+      <div className="flex flex-row justify-end">
         <MusicPlayer />
         <OfficeHost />
       </div>
 
-      <div className="w-full flex flex-row space-x-8">
+      <div className="flex flex-row w-full space-x-8">
         <div className="w-1/3">
           <MemoryLane />
         </div>
@@ -26,7 +26,7 @@ export default function Home() {
           <Images />
         </div>
       </div>
-      <div className=" flex flex-row w-full"></div>
+      <div className="flex flex-row w-full "></div>
     </main>
   );
 }

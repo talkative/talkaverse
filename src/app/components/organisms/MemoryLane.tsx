@@ -4,7 +4,7 @@ import imgSrc from '../../../../public/image/DSCF2524.jpg';
 
 const MemoryLane: any = () => {
   return (
-    <div className="h-full p-1 overflow-hidden bg-talkativedarkpurple rounded-2xl">
+    <div className="h-full p-1 overflow-hidden bg-talkativedarkpurple rounded-2xl font-raleway">
       <div className="overflow-hidden rounded-t-xl w-full aspect-[5/3]">
         <Image className="mx-auto" src={imgSrc} alt="memorylane" />
       </div>
