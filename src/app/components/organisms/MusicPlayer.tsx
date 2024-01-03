@@ -1,15 +1,62 @@
 'use client';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { FC } from 'react';
+import formatDuration from 'format-duration';
 
-const MusicPlayer: any = () => {
+import useGetGroup from '@/hooks/useSonos/useGetGroup';
+
+interface MusicPlayer {
+  groupId: string;
+  initialData?: any;
+  widget?: boolean;
+}
+
+const MusicPlayer: FC<MusicPlayer> = ({ groupId, initialData }) => {
+  const { data } = useGetGroup({ groupId, options: { initialData } });
+
+  if (!data) return null;
+
+  const { track } = data;
+
   return (
-    <div className="absolute left-0 flex items-center w-1/3 px-0 py-4 overflow-hidden text-white bg-blue-900 rounded-r-lg h-fit">
-      <FontAwesomeIcon className="fixed h-6 pl-3 pr-0" icon={faPlay} />
-      <div className="w-full ml-3 overflow-hidden">
-        <div className="italic animate-marquee whitespace-nowrap">
-          <span> Now Playing: Tame Impala - One More Year</span>
+    <div
+      className="flex items-center justify-center w-full h-full p-8 rounded-lg"
+      style={{
+        background: `linear-gradient(45deg, ${track.albumArtColors.primary} 0%, ${track.albumArtColors.secondary} 100%)`,
+        boxShadow: `inset 0 0 30px ${track.albumArtColors.primary}, inset 0px 0 50px ${track.albumArtColors.secondary}, 0px 0 80px ${track.albumArtColors.primary}`,
+      }}
+      key={track.title}
+    >
+      <div className="w-48">
+        <img
+          className="w-full h-full aspect-[1/1] rounded overflow-hidden shadow-lg"
+          src={track.albumArtUri}
+          alt={`${track.title} by ${track.artist} album art`}
+        />
+        <h1 className="mt-3 text-xl font-bold">{track.title}</h1>
+        <p>{track.artist}</p>
+        <p className="mt-1 text-gray-200">{track.album}</p>
+        {/* Saving this down here, if we want to add the progress of the song */}
+        {/* <div className="relative w-full h-1 mt-3 overflow-hidden rounded-full">
+          <div
+            className="absolute top-0 left-0 h-full transition-all duration-1000 ease-out bg-white"
+            style={{
+              width: `${track.progress}%`,
+            }}
+          />
+          <div className="absolute top-0 left-0 w-full h-full bg-white opacity-40" />
         </div>
+        <div className="flex justify-between w-full mt-1">
+          <div>
+            <p className="text-sm text-gray-200">
+              {formatDuration(track.positionInMs)}
+            </p>
+          </div>
+          <div>
+            <p className="text-sm text-gray-200">
+              {formatDuration(track.durationInMs)}
+            </p>
+          </div>
+        </div> */}
       </div>
     </div>
   );
