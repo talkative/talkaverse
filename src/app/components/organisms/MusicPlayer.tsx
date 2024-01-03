@@ -32,9 +32,13 @@ const MusicPlayer: FC<MusicPlayer> = ({ groupId, initialData }) => {
           src={track.albumArtUri}
           alt={`${track.title} by ${track.artist} album art`}
         />
-        <h1 className="mt-3 text-xl font-bold">{track.title}</h1>
-        <p>{track.artist}</p>
-        <p className="mt-1 text-gray-200">{track.album}</p>
+        <div className="overflow-x-hidden ">
+          <h1 className="mt-3 text-xl font-bold line-clamp-2 ">
+            {track.title}
+          </h1>
+          <p className="truncate">{track.artist}</p>
+          <p className="mt-1 text-gray-200 truncate">{track.album}</p>
+        </div>
         {/* Saving this down here, if we want to add the progress of the song */}
         {/* <div className="relative w-full h-1 mt-3 overflow-hidden rounded-full">
           <div
