@@ -1,13 +1,20 @@
+'use client';
 import events from '@/app/configs/events';
 import CalendarEvent from '../molecules/CalenderEvent';
+
+import { useGetCalendarEvents } from '@/hooks/useCalendar';
 
 console.log('events', events);
 
 const Calendar: any = () => {
   console.log(events);
 
+  const { data, status } = useGetCalendarEvents();
+
+  console.log({ data, status });
+
   return (
-    <div className="h-full flex flex-col justify-between">
+    <div className="flex flex-col justify-between h-full">
       {events.map((event, index) => (
         <>
           <div className="h-200">

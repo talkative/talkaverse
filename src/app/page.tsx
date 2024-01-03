@@ -9,7 +9,8 @@ import React, { useState } from 'react';
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-full min-h-screen p-4 p-16 space-y-8 bg-gradient-to-l from-gray">
+    // <main className="flex flex-col w-full min-h-screen p-4 p-16 space-y-8 bg-gradient-to-l from-gray">
+    <main className="flex flex-col w-full min-h-screen p-4 p-16 space-y-8   bg-[url('../../public/image/techbar-bg.svg')] bg-cover">
       <div className="flex flex-row justify-end">
         <MusicPlayer />
         <OfficeHost />
