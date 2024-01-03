@@ -33,17 +33,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-@layer base {
-  :root {
-    --color-dark-blue: 30 29 40;
-    --color-baby-blue: 159 193 244;
-    --color-tulip: 255 114 114;
-    --color-chinese-silver: 220 220 220;
-    --color-mustard: 255 210 93;
-    --color-almost-white: 248 251 255;
-    --color-gray: 168 168 168;
-    --color-talkative-yellow: 255 209 93;
-    --color-talkative-darkpurple: 30 29 40
-  }
-}
