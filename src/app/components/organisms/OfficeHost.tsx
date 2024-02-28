@@ -1,13 +1,9 @@
 'use client';
-import LisaÖrtlund from '../../../../public/image/lisa.svg';
 import Image from 'next/image';
 
 import useGetHosts from '@/hooks/useHosts/useGetHosts';
 
 const OfficeHost: any = () => {
-  const firstSelectedOfficeHost = 'Lisa Örtlund';
-  const secondSelectedOfficeHost = 'Lisa Örtlund';
-
   const { data, status } = useGetHosts();
 
   if (!data) {
