@@ -49,7 +49,7 @@ const CalendarEvent: React.FC<CalendarEventType> = ({
   console.log('data.end.dateTime', getHours(data.end.dateTime));
 
   return (
-    <div className="border-2 text-black">
+    <div className="border-2 text-yellow-500 p-4 bg-blue-900 rounded-2xl font-raleway">
       <div className="text-2xl">
         {eventStart && (
           <>
