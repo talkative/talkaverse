@@ -1,25 +1,41 @@
+'use client';
 import LisaÖrtlund from '../../../../public/image/lisa.svg';
 import Image from 'next/image';
+
+import useGetHosts from '@/hooks/useHosts/useGetHosts';
 
 const OfficeHost: any = () => {
   const firstSelectedOfficeHost = 'Lisa Örtlund';
   const secondSelectedOfficeHost = 'Lisa Örtlund';
-  const theme = 'chips';
+
+  const { data, status } = useGetHosts();
+
+  if (!data) {
+    return null;
+  }
+
+  const {
+    data: { assigned, theme, week, coverImage },
+  } = data;
 
   return (
     <div className="p-4 space-y-6">
       <div className="flex flex-col text-end">
-        <span className="text-2xl font-bold">Office Hosts</span>
-        <span>{`${firstSelectedOfficeHost} & ${secondSelectedOfficeHost}`}</span>
+        <span className="text-2xl font-bold">{`Office Hosts w.${week}`}</span>
+        <span>{`${assigned[0]?.name} & ${assigned[1]?.name}`}</span>
       </div>
       <div className="inline-flex content-end h-32">
         <Image
-          src={LisaÖrtlund}
+          width={100}
+          height={100}
+          src={assigned[0]?.avatar_url}
           alt="illustration of an employee at Talkative"
           className="z-0 w-full h-full aspect-[1/1] rounded overflow-hidden relative top-6 left-4"
         />
         <Image
-          src={LisaÖrtlund}
+          src={assigned[1]?.avatar_url}
+          width={100}
+          height={100}
           alt="illustration of an employee at Talkative"
           className="z-10 w-full h-full aspect-[1/1] rounded overflow-hidden relative"
         />
