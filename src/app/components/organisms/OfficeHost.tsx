@@ -14,11 +14,11 @@ const OfficeHost: any = () => {
     data: { assigned, theme, week, coverImage },
   } = data;
 
-  return (
+  return assigned ? (
     <div className="p-4 space-y-6">
       <div className="flex flex-col text-end">
         <span className="text-2xl font-bold">{`Office Hosts w.${week}`}</span>
-        <span>{`${assigned[0]?.name} & ${assigned[1]?.name}`}</span>
+        <span>{`${assigned[0].name} & ${assigned[1]?.name}`}</span>
       </div>
       <div className="inline-flex content-end h-32">
         <Image
@@ -41,7 +41,7 @@ const OfficeHost: any = () => {
         <span>{theme}</span>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default OfficeHost;
