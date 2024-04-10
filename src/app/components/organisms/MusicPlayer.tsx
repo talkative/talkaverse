@@ -3,6 +3,7 @@ import { FC } from 'react';
 import formatDuration from 'format-duration';
 
 import useGetGroup from '@/hooks/useSonos/useGetGroup';
+import { UseGetGroups } from '@/hooks/useSonos/useGetGroups';
 
 interface MusicPlayer {
   groupId: string;
@@ -11,11 +12,12 @@ interface MusicPlayer {
 }
 
 const MusicPlayer: FC<MusicPlayer> = ({ groupId, initialData }) => {
-  const { data } = useGetGroup({ groupId, options: { initialData } });
+  const { data } = UseGetGroups({ options: { initialData } });
+  const [group] =
+    data?.sort((a, b) => a.devices.length - b.devices.length) || [];
+  const { track } = group || [];
 
-  if (!data) return null;
-
-  const { track } = data;
+  if (!track) return null;
 
   return (
     <div
