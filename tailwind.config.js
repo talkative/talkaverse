@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        jacquard: ['Jacquard 12'],
+      },
       colors: {
         yellow: {
           DEFAULT: 'ffd25d',

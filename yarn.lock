@@ -647,7 +647,7 @@ damerau-levenshtein@^1.0.8:
 
 date-fns@^3.6.0:
   version "3.6.0"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-3.6.0.tgz#f20ca4fe94f8b754951b24240676e8618c0206bf"
+  resolved "https://registry.npmjs.org/date-fns/-/date-fns-3.6.0.tgz"
   integrity sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==
 
 debug@^3.2.7:
@@ -1200,7 +1200,7 @@ form-data@^4.0.0:
 
 format-duration@^3.0.2:
   version "3.0.2"
-  resolved "https://registry.yarnpkg.com/format-duration/-/format-duration-3.0.2.tgz#cc90d76dcbf2b3a09978ae4c0f27619d4249cd1d"
+  resolved "https://registry.npmjs.org/format-duration/-/format-duration-3.0.2.tgz"
   integrity sha512-pKzJDSRgK2lqAiPW3uizDaIJaJnataZclsahz25UMwfdryBGDa+1HlbXGjzpMvX/2kMh4O0sNevFXKaEfCjHsA==
 
 fraction.js@^4.2.0:

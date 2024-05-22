@@ -23,10 +23,10 @@ export default function Home() {
       </div> */}
 
       <div className="flex flex-row w-full space-x-8">
-        <div className="w-1/3">
+        {/*     <div className="w-1/3">
           <MemoryLane />
-        </div>
-        <div className="w-1/3">
+        </div> */}
+        <div className="w-1/3 h-1/2">
           <Calendar />
         </div>
         <div className="w-1/3">

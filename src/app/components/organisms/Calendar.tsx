@@ -12,7 +12,7 @@ const Calendar: any = () => {
   }
 
   return (
-    <div className="flex flex-col overflow-hidden justify-between h-full">
+    <div className="flex flex-col justify-between h-full overflow-hidden">
       {data &&
         data.data.slice(0, 3).map((data, index) => (
           <>
